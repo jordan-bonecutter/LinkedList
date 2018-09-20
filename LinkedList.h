@@ -19,3 +19,4 @@ void deleteFirstItem(LinkedList *list);
 void deleteLastItem(LinkedList *list);
 void deleteItemAtIndex(LinkedList *list, uint index);
 void deleteList(LinkedList *list);
+void *itemAtIndex(LinkedList *list, uint index);

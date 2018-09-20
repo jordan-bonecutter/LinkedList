@@ -23,6 +23,7 @@ void deleteFirstStudent(StudentList *list);
 void deleteLastStudent(StudentList *list);
 void deleteStudentAtIndex(StudentList *list, uint index);
 void deleteStudentList(StudentList *list);
+Student *studentAtIndex(StudentList *list, uint index);
 
 Student *newStudent();
 void deleteStudent(void *data);

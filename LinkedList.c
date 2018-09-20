@@ -206,6 +206,18 @@ void deleteList(LinkedList *in)
 	free(in);
 }
 
+void *itemAtIndex(LinkedList *in, uint index)
+{
+	List *list = (List *)in;
+	assert(list);
+	Element *elementAtIndex = list->first;
+	for(uint n = 0; n < index; n++)
+	{
+		elementAtIndex = elementAtIndex->prev;
+	}
+	return elementAtIndex->data;
+}
+
 Element *newElement(void *data, List *list)
 {
 	Element *res = malloc(sizeof(Element));

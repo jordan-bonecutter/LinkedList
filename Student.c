@@ -47,6 +47,11 @@ void deleteStudentList(StudentList *list)
 	deleteList(list);
 }
 
+Student *studentAtIndex(StudentList *list, uint index)
+{
+	return (Student *)itemAtIndex(list, index);
+}
+
 Student *newStudent()
 {
 	Student *res = malloc(sizeof(Student));
