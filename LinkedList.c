@@ -211,11 +211,15 @@ void *itemAtIndex(LinkedList *in, uint index)
 	List *list = (List *)in;
 	assert(list);
 	Element *elementAtIndex = list->first;
-	for(uint n = 0; n < index; n++)
+	if(index < list->length)
 	{
-		elementAtIndex = elementAtIndex->prev;
+		for(uint n = 0; n < index; n++)
+		{
+			elementAtIndex = elementAtIndex->prev;
+		}
+		return elementAtIndex->data;
 	}
-	return elementAtIndex->data;
+	return NULL;
 }
 
 Element *newElement(void *data, List *list)
